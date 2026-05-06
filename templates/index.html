@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Gerador de senhas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>GeR@d0R__dE__$eNhA</h1>
+        
+        <form method="POST">
+            <div class="form-group">
+                <label for="tamanho">Quantidade de caracteres (8 a 50):</label>
+                <input type="range" id="tamanho" name="tamanho" value="12" min="8" max="50" oninput="this.nextElementSibling.value = this.value">
+                <output>12</output>
+            </div>
+            <div class="options-group">
+                <label><input type="checkbox" name="letras_mai" checked> ABC (Maiúsculas)</label>
+                <label><input type="checkbox" name="letras_min" checked> abc (Minúsculas)</label>
+                <label><input type="checkbox" name="numeros" checked> 123 (Números)</label>
+                <label><input type="checkbox" name="simbolos" checked> #$@ (Símbolos)</label>
+            </div>
+            <button type="submit">Gerar Senha Forte</button>
+        </form>
+
+        {% if senha %}
+            <div class="result-box">
+                <p>Sua nova senha:</p>
+                <code>{{ senha }}</code>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

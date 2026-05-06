@@ -1,0 +1,124 @@
+:root {
+    --cor-dark-primary: #242e2d;
+    --cor-dark-secondary: #3b707d;
+    --cor-light-primary: #adc2d3;
+    --cor-light-secondary: #e3ecf3;
+
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: var(--cor-light-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: var(--cor-dark-primary);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 3rem;
+    font-size: 2.25rem;
+    color: var(--cor-light-primary);
+}
+
+/* Formulário e Inputs */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--cor-light-secondary);
+}
+
+
+input[type="range"] {
+    width: 100%;
+    accent-color: var(--cor-dark-secondary);
+    background: #2c2c2c;
+    cursor: pointer;
+}
+
+output {
+    font-size: 30px;
+}
+
+.options-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide em duas colunas */
+    gap: 10px;
+}
+
+.options-group label {
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.options-group input[type="checkbox"] {
+    accent-color: var(--cor-dark-secondary);
+    width: 18px;
+    height: 18px;
+}
+
+button {
+    font-size: 1rem;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--cor-dark-secondary);
+    color: var(--cor-light-primary);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cor-light-primary);
+    color: var(--cor-dark-secondary);
+}
+
+/* Área da Senha Gerada */
+.result-box {
+    margin-top: 2rem;
+    padding: 15px;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    border: 1px dashed var(--cor-light-secondary);
+    word-wrap: break-word; /* Para senhas longas não quebrarem o layout */
+}
+
+.result-box p{
+     margin-top: 0; 
+     font-size: 1rem; 
+     color: var(--cor-dark-secondary);
+}
+
+.result-box code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    color: var(--cor-light-secondary);
+}
