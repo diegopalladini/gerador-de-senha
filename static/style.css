@@ -20,10 +20,10 @@ body {
 
 .container {
     background-color: var(--cor-dark-primary);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-    width: 100%;
+    width: 90%;
     max-width: 400px;
     text-align: center;
 }
@@ -121,4 +121,18 @@ button:hover {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.2rem;
     color: var(--cor-light-secondary);
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem; /* Diminui o título no celular */
+    }
+    
+    .options-group {
+        grid-template-columns: 1fr; /* No celular, os filtros ficam um embaixo do outro */
+    }
+    
+    button {
+        padding: 15px; /* Botão maior para ser mais fácil de clicar com o dedo */
+    }
 }
