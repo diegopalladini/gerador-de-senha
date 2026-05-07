@@ -51,7 +51,7 @@ label {
 
 
 input[type="range"] {
-    width: 100%;
+    width: 70%;
     accent-color: var(--cor-dark-secondary);
     background: #2c2c2c;
     cursor: pointer;
@@ -124,8 +124,12 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+    .container {
+        max-width: 80%;
+    }
+    
     h1 {
-        font-size: 1.8rem; /* Diminui o título no celular */
+        font-size: 1.5rem; /* Diminui o título no celular */
     }
     
     .options-group {
